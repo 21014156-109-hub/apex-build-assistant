@@ -1,10 +1,10 @@
 # AI Construction Operations Assistant
 
-- [ ] Build shared design system, data model, services, and application shell
-- [ ] Build dashboard, projects, and project detail
-- [ ] Build documents and staged AI analysis
-- [ ] Build estimator, evidence, assumptions, and review workflow
-- [ ] Build historical projects, takeoff, and cost analysis
-- [ ] Build WhatsApp agent and field report integration
-- [ ] Build reports and settings
-- [ ] Validate routes, responsive layouts, interactions, and diagnostics
+- [x] Build shared design system, data model, services, and application shell
+- [x] Build dashboard, projects, and project detail
+- [x] Build documents and staged AI analysis
+- [x] Build estimator, evidence, assumptions, and review workflow
+- [x] Build historical projects, takeoff, and cost analysis
+- [x] Build WhatsApp agent and field report integration
+- [x] Build reports and settings
+- [x] Validate routes, responsive layouts, interactions, and diagnostics

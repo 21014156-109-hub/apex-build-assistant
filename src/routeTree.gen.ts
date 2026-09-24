@@ -10,33 +10,180 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as CostAnalysisRouteImport } from './routes/cost-analysis'
+import { Route as DocumentsRouteImport } from './routes/documents'
+import { Route as EstimatorRouteImport } from './routes/estimator'
+import { Route as FieldReportsRouteImport } from './routes/field-reports'
+import { Route as HistoricalProjectsRouteImport } from './routes/historical-projects'
+import { Route as ReportsRouteImport } from './routes/reports'
+import { Route as SettingsRouteImport } from './routes/settings'
+import { Route as TakeoffRouteImport } from './routes/takeoff'
+import { Route as WhatsappAgentRouteImport } from './routes/whatsapp-agent'
+import { Route as ProjectsIndexRouteImport } from './routes/projects.index'
+import { Route as ProjectsProjectIdRouteImport } from './routes/projects.$projectId'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CostAnalysisRoute = CostAnalysisRouteImport.update({
+  id: '/cost-analysis',
+  path: '/cost-analysis',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DocumentsRoute = DocumentsRouteImport.update({
+  id: '/documents',
+  path: '/documents',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EstimatorRoute = EstimatorRouteImport.update({
+  id: '/estimator',
+  path: '/estimator',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FieldReportsRoute = FieldReportsRouteImport.update({
+  id: '/field-reports',
+  path: '/field-reports',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HistoricalProjectsRoute = HistoricalProjectsRouteImport.update({
+  id: '/historical-projects',
+  path: '/historical-projects',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReportsRoute = ReportsRouteImport.update({
+  id: '/reports',
+  path: '/reports',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SettingsRoute = SettingsRouteImport.update({
+  id: '/settings',
+  path: '/settings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TakeoffRoute = TakeoffRouteImport.update({
+  id: '/takeoff',
+  path: '/takeoff',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WhatsappAgentRoute = WhatsappAgentRouteImport.update({
+  id: '/whatsapp-agent',
+  path: '/whatsapp-agent',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjectsIndexRoute = ProjectsIndexRouteImport.update({
+  id: '/projects/',
+  path: '/projects/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjectsProjectIdRoute = ProjectsProjectIdRouteImport.update({
+  id: '/projects/$projectId',
+  path: '/projects/$projectId',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/cost-analysis': typeof CostAnalysisRoute
+  '/documents': typeof DocumentsRoute
+  '/estimator': typeof EstimatorRoute
+  '/field-reports': typeof FieldReportsRoute
+  '/historical-projects': typeof HistoricalProjectsRoute
+  '/reports': typeof ReportsRoute
+  '/settings': typeof SettingsRoute
+  '/takeoff': typeof TakeoffRoute
+  '/whatsapp-agent': typeof WhatsappAgentRoute
+  '/projects/$projectId': typeof ProjectsProjectIdRoute
+  '/projects/': typeof ProjectsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/cost-analysis': typeof CostAnalysisRoute
+  '/documents': typeof DocumentsRoute
+  '/estimator': typeof EstimatorRoute
+  '/field-reports': typeof FieldReportsRoute
+  '/historical-projects': typeof HistoricalProjectsRoute
+  '/reports': typeof ReportsRoute
+  '/settings': typeof SettingsRoute
+  '/takeoff': typeof TakeoffRoute
+  '/whatsapp-agent': typeof WhatsappAgentRoute
+  '/projects/$projectId': typeof ProjectsProjectIdRoute
+  '/projects': typeof ProjectsIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/cost-analysis': typeof CostAnalysisRoute
+  '/documents': typeof DocumentsRoute
+  '/estimator': typeof EstimatorRoute
+  '/field-reports': typeof FieldReportsRoute
+  '/historical-projects': typeof HistoricalProjectsRoute
+  '/reports': typeof ReportsRoute
+  '/settings': typeof SettingsRoute
+  '/takeoff': typeof TakeoffRoute
+  '/whatsapp-agent': typeof WhatsappAgentRoute
+  '/projects/$projectId': typeof ProjectsProjectIdRoute
+  '/projects/': typeof ProjectsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/cost-analysis'
+    | '/documents'
+    | '/estimator'
+    | '/field-reports'
+    | '/historical-projects'
+    | '/reports'
+    | '/settings'
+    | '/takeoff'
+    | '/whatsapp-agent'
+    | '/projects/$projectId'
+    | '/projects/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/cost-analysis'
+    | '/documents'
+    | '/estimator'
+    | '/field-reports'
+    | '/historical-projects'
+    | '/reports'
+    | '/settings'
+    | '/takeoff'
+    | '/whatsapp-agent'
+    | '/projects/$projectId'
+    | '/projects'
+  id:
+    | '__root__'
+    | '/'
+    | '/cost-analysis'
+    | '/documents'
+    | '/estimator'
+    | '/field-reports'
+    | '/historical-projects'
+    | '/reports'
+    | '/settings'
+    | '/takeoff'
+    | '/whatsapp-agent'
+    | '/projects/$projectId'
+    | '/projects/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CostAnalysisRoute: typeof CostAnalysisRoute
+  DocumentsRoute: typeof DocumentsRoute
+  EstimatorRoute: typeof EstimatorRoute
+  FieldReportsRoute: typeof FieldReportsRoute
+  HistoricalProjectsRoute: typeof HistoricalProjectsRoute
+  ReportsRoute: typeof ReportsRoute
+  SettingsRoute: typeof SettingsRoute
+  TakeoffRoute: typeof TakeoffRoute
+  WhatsappAgentRoute: typeof WhatsappAgentRoute
+  ProjectsProjectIdRoute: typeof ProjectsProjectIdRoute
+  ProjectsIndexRoute: typeof ProjectsIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +195,99 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/cost-analysis': {
+      id: '/cost-analysis'
+      path: '/cost-analysis'
+      fullPath: '/cost-analysis'
+      preLoaderRoute: typeof CostAnalysisRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/documents': {
+      id: '/documents'
+      path: '/documents'
+      fullPath: '/documents'
+      preLoaderRoute: typeof DocumentsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/estimator': {
+      id: '/estimator'
+      path: '/estimator'
+      fullPath: '/estimator'
+      preLoaderRoute: typeof EstimatorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/field-reports': {
+      id: '/field-reports'
+      path: '/field-reports'
+      fullPath: '/field-reports'
+      preLoaderRoute: typeof FieldReportsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/historical-projects': {
+      id: '/historical-projects'
+      path: '/historical-projects'
+      fullPath: '/historical-projects'
+      preLoaderRoute: typeof HistoricalProjectsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reports': {
+      id: '/reports'
+      path: '/reports'
+      fullPath: '/reports'
+      preLoaderRoute: typeof ReportsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/settings': {
+      id: '/settings'
+      path: '/settings'
+      fullPath: '/settings'
+      preLoaderRoute: typeof SettingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/takeoff': {
+      id: '/takeoff'
+      path: '/takeoff'
+      fullPath: '/takeoff'
+      preLoaderRoute: typeof TakeoffRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/whatsapp-agent': {
+      id: '/whatsapp-agent'
+      path: '/whatsapp-agent'
+      fullPath: '/whatsapp-agent'
+      preLoaderRoute: typeof WhatsappAgentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projects/': {
+      id: '/projects/'
+      path: '/projects'
+      fullPath: '/projects/'
+      preLoaderRoute: typeof ProjectsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projects/$projectId': {
+      id: '/projects/$projectId'
+      path: '/projects/$projectId'
+      fullPath: '/projects/$projectId'
+      preLoaderRoute: typeof ProjectsProjectIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CostAnalysisRoute: CostAnalysisRoute,
+  DocumentsRoute: DocumentsRoute,
+  EstimatorRoute: EstimatorRoute,
+  FieldReportsRoute: FieldReportsRoute,
+  HistoricalProjectsRoute: HistoricalProjectsRoute,
+  ReportsRoute: ReportsRoute,
+  SettingsRoute: SettingsRoute,
+  TakeoffRoute: TakeoffRoute,
+  WhatsappAgentRoute: WhatsappAgentRoute,
+  ProjectsProjectIdRoute: ProjectsProjectIdRoute,
+  ProjectsIndexRoute: ProjectsIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
